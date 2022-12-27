@@ -7,6 +7,14 @@
     <title>HexClock</title>
 </head>
 <body>
-    <h1>hi!</h1>
+    <h1 style="text-align: center"></h1>
+    <script>setInterval(()=>{
+        let date = new Date()
+        console.log(date)
+        let clock = document.querySelector("h1")
+        let time = `#${String(date.getHours()).padStart(2, '0')}${String(date.getMinutes()).padStart(2, '0')}${String(date.getSeconds()).padStart(2, '0')}`  
+        clock.innerText = time
+        document.body.style.backgroundColor = time})
+        </script>
 </body>
 </html>
